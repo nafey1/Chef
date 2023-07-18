@@ -8,6 +8,10 @@ pwd
 /home/opc/chef-repo
 
 knife bootstrap webserver --connection-user opc --node-name webserver --sudo
+
+OR
+
+knife bootstrap <public-ip-address> --connection-user opc --node-name webserver --sudo
 ``` 
 > After a successful bootstrapping of the node client, the node should be visible in the Chef console
 

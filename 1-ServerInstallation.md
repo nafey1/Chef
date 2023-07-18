@@ -6,6 +6,25 @@ sudo yum -y install libnsl
 ```
 > Also, verify the ntp / chrony, FQDN
 
+## Configure FQDN (optional, if not already configured)
+```bash
+sudo hostnamectl set-hostname chef.nafey.com
+
+# cat /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME= chef.nafey.com
+
+# specific to OCI compute
+# cat /etc/oci-hostname.conf 
+PRESERVE_HOSTINFO=2
+
+# cat /etc/hosts
+172.30.0.2 chef.nafey.world chef
+172.30.0.2 bastion.public.toronto.oraclevcn.com bastion
+```
+> Reboot the server for the changes to take effect
+
+
 ## Chef Server Installation
 ```bash 
 sudo yum -y install https://packages.chef.io/files/stable/chef-server/12.19.31/el/7/chef-server-core-12.19.31-1.el7.x86_64.rpm
