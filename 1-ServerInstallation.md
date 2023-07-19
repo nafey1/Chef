@@ -19,7 +19,7 @@ HOSTNAME= chef.nafey.com
 PRESERVE_HOSTINFO=2
 
 # cat /etc/hosts
-172.30.0.2 chef.nafey.world chef
+172.30.0.2 chef.nafey.com chef
 172.30.0.2 bastion.public.toronto.oraclevcn.com bastion
 ```
 > Reboot the server for the changes to take effect
